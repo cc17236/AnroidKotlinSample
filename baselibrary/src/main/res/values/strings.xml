@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">BaseLibrary</string>
+    <!--<string name="error_no_metadata">无法检索到数据</string>-->
+    <string name="rx_banner_app_name" translatable="false">bannerLib</string>
+    <string name="rb_empty_view_string">…</string>
+    <string name="appbar_spring_behavior">android.support.design.widget.AppBarLayoutSpringBehavior</string>
+    <string name="appbar_controll_spring_behavior">android.support.design.widget.DisableableAppBarLayoutSpringBehavior</string>
+    <string name="appbar_controll_behavior">android.support.design.widget.DisableableAppBarLayoutBehavior</string>
+    <string name="appbar_fling_fix_behavior">android.support.design.widget.AppBarFlingFixBehavior</string>
+    <string name="appbar_scroll_fix_behavior">android.support.design.widget.FixedScrollingViewBehavior</string>
+
+    <string name="gravity_left">left</string>
+    <string name="gravity_center">center</string>
+    <string name="gravity_right">right</string>
+
+    <string name="page_error">网络开小差了</string>
+    <string name="page_error_retry">点击重试</string>
+    <string name="page_empty">暂无新数据</string>
+
+    <string name="brvah_app_name">Library</string>
+    <string name="brvah_loading">正在加载中...</string>
+    <string name="brvah_load_failed">加载失败，请点我重试</string>
+    <string name="brvah_load_end">没有更多数据</string>
+</resources>

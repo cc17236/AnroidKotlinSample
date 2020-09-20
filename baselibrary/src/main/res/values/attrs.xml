@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference"/>
+        <attr name="shadow_right" format="reference"/>
+        <attr name="shadow_bottom" format="reference"/>
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference"/>
+
+
+    <declare-styleable name="CornerView">
+        <attr name="corner_color" format="color" />
+        <attr name="corner_width" format="dimension" />
+        <attr name="corner_gravity" format="enum">
+            <enum name="leftBottom" value="1" />
+            <enum name="rightBottom" value="3" />
+            <enum name="leftTop" value="0" />
+            <enum name="rightTop" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="VerticalSeekBar">
+        <attr name="seekBarRotation">
+            <enum name="CW90" value="90" />
+            <enum name="CW270" value="270" />
+        </attr>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="VotingView">
+        <attr name="leftNum" format="float" />
+        <attr name="leftColor" format="color" />
+        <attr name="rightNum" format="float" />
+        <attr name="rightColor" format="color" />
+        <attr name="Inclination" format="integer" />
+        <attr name="leftTextColor" format="color" />
+        <attr name="TextSize" format="dimension" />
+        <attr name="rightTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomNavigationBar">
+        <attr name="bnbElevation" format="dimension" />
+        <attr name="bnbActiveColor" format="color" />
+        <attr name="bnbInactiveColor" format="color" />
+        <attr name="bnbBackgroundColor" format="color" />
+        <attr name="bnbAnimationDuration" format="integer" />
+        <attr name="bnbMode" format="enum">
+            <enum name="mode_default" value="0" />
+            <enum name="mode_fixed" value="1" />
+            <enum name="mode_shifting" value="2" />
+            <enum name="mode_fixed_no_title" value="3" />
+            <enum name="mode_shifting_no_title" value="4" />
+        </attr>
+        <attr name="bnbBackgroundStyle" format="enum">
+            <enum name="background_style_default" value="0" />
+            <enum name="background_style_static" value="1" />
+            <enum name="background_style_ripple" value="2" />
+        </attr>
+        <attr name="bnbAutoHideEnabled" format="boolean" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="ZWCalendarView">
+        <attr name="weekHeight" />
+        <attr name="weekTextSize" />
+        <attr name="weekBackgroundColor" />
+        <attr name="weekTextColor" />
+        <attr name="calendarTextSize" />
+        <attr name="calendarTextColor" />
+        <attr name="isShowOtherMonth" format="boolean" />
+        <attr name="otherMonthTextColor" format="color" />
+        <attr name="isShowLunar" />
+        <attr name="lunarTextColor" />
+        <attr name="lunarTextSize" />
+        <attr name="todayTextColor" />
+        <attr name="selectColor" format="color" />
+        <attr name="selectTextColor" format="color" />
+        <attr name="signIconSuccessId" format="integer" />
+        <attr name="signIconErrorId" format="integer" />
+        <attr name="signIconSize" format="dimension" />
+        <attr name="signTextColor" />
+        <attr name="limitFutureMonth" />
+    </declare-styleable>
+
+    <attr name="weekHeight" format="dimension" />
+    <attr name="weekTextSize" format="dimension" />
+    <attr name="weekBackgroundColor" format="color" />
+    <attr name="weekTextColor" format="color" />
+    <attr name="calendarTextSize" format="dimension" />
+    <attr name="calendarTextColor" format="color" />
+    <attr name="isShowLunar" format="boolean" />
+    <attr name="lunarTextColor" format="color" />
+    <attr name="lunarTextSize" format="dimension" />
+    <attr name="todayTextColor" format="color" />
+    <attr name="signTextColor" format="color" />
+    <attr name="limitFutureMonth" format="boolean" />
+
+    <declare-styleable name="ZWSignCalendarView">
+        <attr name="weekHeight" />
+        <attr name="weekTextSize" />
+        <attr name="weekBackgroundColor" />
+        <attr name="weekTextColor" />
+        <attr name="calendarTextSize" />
+        <attr name="calendarTextColor" />
+        <attr name="isShowLunar" />
+        <attr name="lunarTextColor" />
+        <attr name="lunarTextSize" />
+        <attr name="todayTextColor" />
+        <attr name="signColor" format="color" />
+        <attr name="signSize" format="dimension" />
+        <attr name="signTextColor" />
+        <attr name="limitFutureMonth" />
+    </declare-styleable>
+
+    <declare-styleable name="Banner">
+        <attr name="delay_time" format="integer" />
+        <attr name="scroll_time" format="integer" />
+        <attr name="is_auto_play" format="boolean" />
+        <attr name="title_background" format="color|reference" />
+        <attr name="title_textcolor" format="color" />
+        <attr name="title_textsize" format="dimension" />
+        <attr name="title_height" format="dimension" />
+        <attr name="indicator_width" format="dimension" />
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_margin" format="dimension" />
+        <attr name="indicator_drawable_selected" format="reference" />
+        <attr name="indicator_drawable_unselected" format="reference" />
+        <attr name="banner_layout" format="reference" />
+        <attr name="banner_default_image" format="reference" />
+        <attr name="image_scale_type" format="enum">
+            <enum name="center" value="0" />
+            <enum name="center_crop" value="1" />
+            <enum name="center_inside" value="2" />
+            <enum name="fit_center" value="3" />
+            <enum name="fit_end" value="4" />
+            <enum name="fit_start" value="5" />
+            <enum name="fit_xy" value="6" />
+            <enum name="matrix" value="7" />
+        </attr>
+        <!--<attr name="indicator_animator" format="reference" />-->
+        <!--<attr name="indicator_animator_reverse" format="reference" />-->
+    </declare-styleable>
+
+
+
+    <declare-styleable name="BezierBannerDot">
+        <attr name="selectedColor" format="color" />
+        <attr name="unSelectedColor" format="color" />
+        <attr name="selectedRaduis" format="dimension" />
+        <attr name="unSelectedRaduis" format="dimension" />
+        <attr name="spacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="KPSwitchPanelLayout">
+        <attr name="ignore_recommend_height" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FixableCardView">
+        <attr name="cardShadowStartColor" format="color" />
+        <attr name="cardShadowEndColor" format="color" />
+    </declare-styleable>
+
+
+
+
+    <declare-styleable name="RealtimeBlurView">
+        <attr name="realtimeBlurRadius" format="dimension" />
+        <attr name="realtimeDownsampleFactor" format="float" />
+        <attr name="realtimeOverlayColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="textFont" format="string" />
+    </declare-styleable>
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer" />
+        <attr name="tag_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="RxBanner">
+        <attr name="rb_aspectRatio" format="float" />
+        <attr name="rb_canSwipe" format="boolean" />
+        <attr name="rb_autoPlay" format="boolean" />
+        <attr name="rb_infinite" format="boolean" />
+        <attr name="rb_itemScale" format="float" />
+        <attr name="rb_timeInterval" format="integer" />
+        <attr name="rb_itemPercent" format="integer" />
+        <attr name="rb_itemMoveSpeed" format="float" />
+        <attr name="rb_centerAlpha" format="float" />
+        <attr name="rb_sideAlpha" format="float" />
+        <attr name="rb_itemSpace" format="dimension" />
+        <attr name="rb_emptyViewText" format="string" />
+        <attr name="rb_emptyViewResource" format="reference" />
+        <attr name="rb_title_indicator_layout" format="reference" />
+        <attr name="rb_orderType" format="enum">
+            <enum name="asc" value="1" />
+            <enum name="desc" value="2" />
+        </attr>
+        <attr name="rb_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="rb_viewPaperMode" format="boolean" />
+        <!--title-->
+        <attr name="rb_title_gravity">
+            <flag name="bottom" value="80" />
+            <flag name="center" value="17" />
+            <flag name="center_horizontal" value="1" />
+            <flag name="center_vertical" value="16" />
+            <flag name="clip_horizontal" value="8" />
+            <flag name="clip_vertical" value="128" />
+            <flag name="end" value="8388613" />
+            <flag name="fill" value="119" />
+            <flag name="fill_horizontal" value="7" />
+            <flag name="fill_vertical" value="112" />
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+            <flag name="start" value="8388611" />
+            <flag name="top" value="48" />
+        </attr>
+        <attr name="rb_title_layout_gravity">
+            <flag name="bottom" value="80" />
+            <flag name="center" value="17" />
+            <flag name="center_horizontal" value="1" />
+            <flag name="center_vertical" value="16" />
+            <flag name="clip_horizontal" value="8" />
+            <flag name="clip_vertical" value="128" />
+            <flag name="end" value="8388613" />
+            <flag name="fill" value="119" />
+            <flag name="fill_horizontal" value="7" />
+            <flag name="fill_vertical" value="112" />
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+            <flag name="start" value="8388611" />
+            <flag name="top" value="48" />
+        </attr>
+        <attr name="rb_title_visible" format="boolean" />
+        <attr name="rb_title_margin" format="dimension" />
+        <attr name="rb_title_marginTop" format="dimension" />
+        <attr name="rb_title_marginBottom" format="dimension" />
+        <attr name="rb_title_marginStart" format="dimension" />
+        <attr name="rb_title_marginEnd" format="dimension" />
+        <attr name="rb_title_padding" format="dimension" />
+        <attr name="rb_title_paddingTop" format="dimension" />
+        <attr name="rb_title_paddingBottom" format="dimension" />
+        <attr name="rb_title_paddingStart" format="dimension" />
+        <attr name="rb_title_paddingEnd" format="dimension" />
+        <attr name="rb_title_width" format="dimension|enum">
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="rb_title_height" format="dimension|enum">
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="rb_title_lineSpacingMultiplier" format="float" />
+        <attr name="rb_title_size" format="dimension" />
+        <attr name="rb_title_color" format="color" />
+        <attr name="rb_title_backgroundColor" format="color" />
+        <attr name="rb_title_backgroundResource" format="reference" />
+        <attr name="rb_title_marquee" format="boolean" />
+
+
+        <!--indicatorConfig-->
+        <attr name="rb_indicator_orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <attr name="rb_indicator_width" format="dimension|enum">
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="rb_indicator_height" format="dimension|enum">
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="rb_indicator_textSize" format="dimension" />
+        <attr name="rb_indicator_textColor" format="color" />
+        <attr name="rb_indicator_backgroundColor" format="color" />
+        <attr name="rb_indicator_backgroundResource" format="reference" />
+        <attr name="rb_indicator_radius" format="dimension" />
+        <attr name="rb_indicator_stroke_width" format="dimension" />
+        <attr name="rb_indicator_scale" format="float" />
+        <attr name="rb_indicator_unselected_color" format="color" />
+        <attr name="rb_indicator_selected_color" format="color" />
+        <attr name="rb_indicator_clickable" format="boolean" />
+        <attr name="rb_indicator_visible" format="boolean" />
+        <attr name="rb_indicator_margin" format="dimension" />
+        <attr name="rb_indicator_marginTop" format="dimension" />
+        <attr name="rb_indicator_marginBottom" format="dimension" />
+        <attr name="rb_indicator_marginStart" format="dimension" />
+        <attr name="rb_indicator_marginEnd" format="dimension" />
+        <attr name="rb_indicator_padding" format="dimension" />
+        <attr name="rb_indicator_paddingTop" format="dimension" />
+        <attr name="rb_indicator_paddingBottom" format="dimension" />
+        <attr name="rb_indicator_paddingStart" format="dimension" />
+        <attr name="rb_indicator_paddingEnd" format="dimension" />
+        <attr name="rb_indicator_interactiveAnimation" format="boolean" />
+        <attr name="rb_indicator_animationDuration" format="integer" />
+        <attr name="rb_indicator_animationType">
+            <enum name="none" value="0" />
+            <enum name="color" value="1" />
+            <enum name="scale" value="2" />
+            <enum name="worm" value="3" />
+            <enum name="slide" value="4" />
+            <enum name="fill" value="5" />
+            <enum name="thinWorm" value="6" />
+            <enum name="drop" value="7" />
+            <enum name="swap" value="8" />
+            <enum name="scale_down" value="9" />
+            <enum name="numeric" value="10" />
+            <enum name="numeric_circle" value="11" />
+        </attr>
+        <attr name="rb_indicator_rtl_mode">
+            <enum name="on" value="0" />
+            <enum name="off" value="1" />
+            <enum name="auto" value="2" />
+        </attr>
+
+        <attr name="rb_indicator_layout_gravity">
+            <flag name="bottom" value="80" />
+            <flag name="center" value="17" />
+            <flag name="center_horizontal" value="1" />
+            <flag name="center_vertical" value="16" />
+            <flag name="clip_horizontal" value="8" />
+            <flag name="clip_vertical" value="128" />
+            <flag name="end" value="8388613" />
+            <flag name="fill" value="119" />
+            <flag name="fill_horizontal" value="7" />
+            <flag name="fill_vertical" value="112" />
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+            <flag name="start" value="8388611" />
+            <flag name="top" value="48" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="CoordinatorTabLayout">
+        <attr name="contentScrim" format="color" />
+        <attr name="tabIndicatorColor" format="color" />
+        <attr name="tabTextColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FixedTabLayout">
+        <attr name="fixedTabIndicatorHeight" format="dimension" />
+        <attr name="fixedTabIndicatorWidth" format="dimension" />
+        <attr name="fixedTabIndicatorColor" format="color" />
+        <attr name="fixedTabPadding" format="dimension" />
+        <attr name="fixedTabPaddingStart" format="dimension" />
+        <attr name="fixedTabPaddingTop" format="dimension" />
+        <attr name="fixedTabPaddingEnd" format="dimension" />
+        <attr name="fixedTabPaddingBottom" format="dimension" />
+        <attr name="fixedTabTextAppearance" format="reference" />
+        <attr name="fixedTabTextColor" format="color" />
+        <attr name="fixedTabSelectedTextColor" format="color" />
+        <attr name="fixedTabMinWidth" format="dimension" />
+        <attr name="fixedTabMaxWidth" format="dimension" />
+        <attr name="fixedTabBackgroundColor" format="reference|color" />
+        <attr name="fixedTabSelectedBackgroundColor" format="reference|color" />
+        <attr name="fixedTabContentStart" format="dimension" />
+        <attr name="fixedTabMode">
+            <enum name="scrollable" value="0x00000000" />
+            <enum name="fixed" value="0x00000001" />
+        </attr>
+        <attr name="fixedTabGravity" format="integer" />
+
+        <attr name="fixedTabTextSize" format="dimension" />
+        <attr name="fixedTabTextBold" format="boolean" />
+        <attr name="fixedTabSelectedTextSize" format="dimension" />
+        <attr name="fixedTabTextSelectedBold" format="boolean" />
+        <attr name="fixedTabDisplayNum" format="integer" />
+        <attr name="fixedTabTextAllCaps" format="boolean" />
+
+
+        <attr name="fixedTabDividerHeight" format="dimension" />
+        <attr name="fixedTabDividerWidth" format="dimension" />
+        <attr name="fixedTabDividerWidthWidthText" format="boolean" />
+        <attr name="fixedTabDividerColor" format="color" />
+        <attr name="fixedTabDividerGravity">
+            <enum name="top" value="0x00000000" />
+            <enum name="center" value="0x00000001" />
+            <enum name="bottom" value="0x00000002" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="MaterialRatingBar">
+        <attr name="mrb_progressTint" format="color|reference" />
+        <attr name="mrb_progressTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_secondaryProgressTint" format="color|reference" />
+        <attr name="mrb_secondaryProgressTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_progressBackgroundTint" format="color|reference" />
+        <attr name="mrb_progressBackgroundTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_indeterminateTint" format="color|reference" />
+        <attr name="mrb_indeterminateTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_fillBackgroundStars" format="boolean" />
+    </declare-styleable>
+
+
+    <attr name="interval" format="integer"/>
+    <attr name="showIndicator" format="boolean"/>
+    <attr name="orientation" format="enum">
+        <enum name="horizontal" value="0"/>
+        <enum name="vertical" value="1"/>
+    </attr>
+    <attr name="autoPlaying" format="boolean"/>
+    <declare-styleable name="RecyclerViewBannerBase">
+        <attr name="interval"/>
+        <attr name="showIndicator" />
+        <attr name="orientation" />
+        <attr name="autoPlaying"/>
+        <attr name="indicatorSelectedSrc" format="color|reference"/>
+        <attr name="indicatorUnselectedSrc" format="color|reference"/>
+        <attr name="indicatorSpace" format="dimension|reference"/>
+        <attr name="indicatorMarginLeft" format="dimension|reference"/>
+        <attr name="indicatorMarginRight" format="dimension|reference"/>
+        <attr name="indicatorMarginBottom" format="dimension|reference"/>
+        <attr name="indicatorGravity" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BannerLayout">
+        <attr name="interval" />
+        <attr name="showIndicator" />
+        <attr name="orientation" />
+        <attr name="autoPlaying"/>
+        <attr name="itemSpace" format="integer"/>
+        <attr name="centerScale" format="float"/>
+        <attr name="moveSpeed" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLayout">
+        <attr name="sl_cornerRadius" format="dimension"/>
+        <attr name="sl_shadowRadius" format="dimension"/>
+        <attr name="sl_shadowColor" format="color"/>
+        <attr name="sl_dx" format="dimension"/>
+        <attr name="sl_dy" format="dimension"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="design_bottom_navigation_margin" tools:override="true">5dp</dimen>
+    <dimen tools:override="true" name="design_bottom_navigation_height">64dp</dimen>
+    <dimen tools:override="true" name="design_bottom_navigation_text_size">12sp</dimen>
+    <dimen tools:override="true" name="design_bottom_navigation_active_text_size">12sp</dimen>
+
+    <dimen name="min_panel_height">220dp</dimen>
+    <dimen name="max_panel_height">425dp</dimen>
+
+    <dimen name="min_keyboard_height">80dp</dimen>
+
+    <dimen name="default_corner_radius">4dp</dimen>
+    <dimen name="default_shadow_radius">4dp</dimen>
+
+
+    <dimen name="scan_frame_width">200dp</dimen>
+
+</resources>

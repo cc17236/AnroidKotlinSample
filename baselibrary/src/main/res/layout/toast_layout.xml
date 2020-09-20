@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/toast_shape"
+    android:gravity="center"
+    android:minHeight="80dp"
+    android:minWidth="120dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <CheckedTextView
+        android:id="@android:id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:shadowColor="#BB000000"
+        android:shadowRadius="2.75"
+        android:textAppearance="@style/TextAppearance.AppCompat.Tooltip"
+        android:textColor="#FFFEFE" />
+</LinearLayout>
