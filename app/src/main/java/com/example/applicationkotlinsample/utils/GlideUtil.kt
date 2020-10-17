@@ -29,6 +29,8 @@ import com.bumptech.glide.request.target.BitmapImageViewTarget
 import com.bumptech.glide.request.target.ImageViewTarget
 import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.util.Util
+import com.example.applicationkotlinsample.R
+import com.example.applicationkotlinsample.base.GlideApp
 import com.huawen.baselibrary.utils.Debuger
 import com.huawen.baselibrary.utils.getActivityFromView
 import com.huawen.baselibrary.views.glide.GlideRoundTransform
@@ -327,7 +329,7 @@ object GlideUtil {
                             .format(DecodeFormat.PREFER_ARGB_8888)
                             .override(Target.SIZE_ORIGINAL)
 
-                        requestOptions.placeholder(R.mipmap.img_placehold_rec)
+                        requestOptions.placeholder(R.mipmap.ic_launcher)
                         requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL)
                         if (dontAnim)
                             requestOptions.dontAnimate()

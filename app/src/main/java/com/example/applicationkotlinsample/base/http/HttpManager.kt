@@ -479,9 +479,9 @@ class HttpManager : InterceptorHelper {
                             .addHeader("Accept-Encoding", "identity")
                             .build()
                     }
-                    if(!DisposalApp.app?.getCurrentUser()?.auth_token.isNullOrEmpty()){
-                        request=request.newBuilder().addHeader("authtoken",DisposalApp.app?.getCurrentUser()?.auth_token.toString()).build()
-                    }
+//                    if(!DisposalApp.app?.getCurrentUser()?.auth_token.isNullOrEmpty()){
+//                        request=request.newBuilder().addHeader("authtoken",DisposalApp.app?.getCurrentUser()?.auth_token.toString()).build()
+//                    }
                     return Pair(null, request)
                 }
             }
@@ -493,9 +493,9 @@ class HttpManager : InterceptorHelper {
                     .addHeader("Connection", "keep-alive")
                     .addHeader("Accept-Encoding", "identity")
                     .build()
-                if(!DisposalApp.app?.getCurrentUser()?.auth_token.isNullOrEmpty()){
-                    originalRequest = originalRequest.newBuilder().addHeader("authtoken",DisposalApp.app?.getCurrentUser()?.auth_token.toString()).build()
-                }
+//                if(!DisposalApp.app?.getCurrentUser()?.auth_token.isNullOrEmpty()){
+//                    originalRequest = originalRequest.newBuilder().addHeader("authtoken",DisposalApp.app?.getCurrentUser()?.auth_token.toString()).build()
+//                }
             }
             return Pair(null, originalRequest)
         }
