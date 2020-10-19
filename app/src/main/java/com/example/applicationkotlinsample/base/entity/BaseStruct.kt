@@ -15,7 +15,7 @@ import java.io.Serializable
 abstract class BaseStruct<T> : Serializable, MultiItemEntity {
 
     @SerializedName("message")
-    open var msg: String? = null
+    open var errorMsg: String? = null
         get() {
             if (field == null) {
                 return "未知异常"
@@ -23,7 +23,7 @@ abstract class BaseStruct<T> : Serializable, MultiItemEntity {
             return field
         }
     @SerializedName("code")
-    open var code: String? = null
+    open var errorCode: String? = null
 
     open var ok: Boolean = true
     @Ignore

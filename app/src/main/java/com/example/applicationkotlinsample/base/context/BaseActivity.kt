@@ -11,6 +11,7 @@ import androidx.annotation.StringRes
 import cn.aihuaiedu.school.base.BaseContract
 import cn.aihuaiedu.school.base.RxPresenter
 import com.example.applicationkotlinsample.base.background.BackgroundLibrary
+import com.example.applicationkotlinsample.communication.entity.BusEvent
 import com.githang.statusbar.StatusBarCompat
 import com.huawen.baselibrary.BuildConfig
 import com.huawen.baselibrary.jni.AppVerify
@@ -136,13 +137,11 @@ abstract class BaseActivity<in V : BaseContract.BaseView, P : BaseContract.BaseP
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val isValidate = AppVerify.isNativeValidate()
         //使用布局框架
         BackgroundLibrary.inject(this)
         //设置默认状态栏颜色
         setStatusBar(this)
         super.onCreate(null)
-        if (isValidate) {
             mPresenter = initPresenter()
             mPresenter!!.attachView(this as V)
             try {
@@ -169,7 +168,6 @@ abstract class BaseActivity<in V : BaseContract.BaseView, P : BaseContract.BaseP
                         showError(it)
                     })
             )
-        }
         EventBus.getDefault().register(this)
     }
 
@@ -454,8 +452,8 @@ abstract class BaseActivity<in V : BaseContract.BaseView, P : BaseContract.BaseP
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-//    @Subscribe
-//    open fun onEventMainThread(event: BusEvent) {}
+    @Subscribe
+    open fun onEventMainThread(event: BusEvent) {}
 
     protected abstract fun getLayoutId(): Int
     protected abstract fun initPresenter(): P

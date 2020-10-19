@@ -9,7 +9,7 @@ import com.lahm.library.VirtualApkCheckUtil
 object AppVerify {
 
     init {
-        System.loadLibrary("JNIEncrypt");
+//        System.loadLibrary("JNIEncrypt");
     }
     //Native 方法声明，显然这里需要传递一个Context过去用于获取包管理器以及包名
 

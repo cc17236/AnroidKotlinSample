@@ -12,13 +12,13 @@ import java.io.Serializable
  */
 abstract class BaseInfo<T> : Serializable, MultiItemEntity {
 
-    open var message: String? = null
+    open var errorMsg: String? = null
 
-    open var code: String? = null
+    open var errorCode: String? = null
 
     open var ok: Boolean = true
 
-    open var body: T? = null
+    open var data: T? = null
 
     class BaseInfoImpl : BaseInfo<BaseInfoImpl>()
 }

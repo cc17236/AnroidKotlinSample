@@ -24,13 +24,10 @@ abstract class BasePopup(protected val context: Context) {
     }
 
     private fun configPop() {
-        val isValidate=AppVerify.isNativeValidate()
-        if (isValidate) {
             mPop = PopupWindow(view, param.width, param.height, param.focusable)
             initWindow()
             initData()
             initView(view!!)
-        }
     }
 
 

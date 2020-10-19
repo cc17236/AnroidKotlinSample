@@ -11,16 +11,16 @@ android {
         renderscriptSupportModeEnabled true
         versionCode 1
         versionName "1.0.0"
-//        externalNativeBuild {
-//            cmake {
-//                cFlags "-Werror -DANDROID "
-//                cppFlags "-frtti -fexceptions "
-//            }
-////            ndk {
-//////                  abiFilters "armeabi-v7a"
-////                abiFilters "armeabi-v7a", "x86", "x86_64"
-////            }
-//        }
+        externalNativeBuild {
+            cmake {
+                cFlags "-Werror -DANDROID "
+                cppFlags "-frtti -fexceptions "
+            }
+            ndk {
+//                  abiFilters "armeabi-v7a"
+                abiFilters "armeabi-v7a", "x86", "x86_64"
+            }
+        }
         multiDexEnabled true
         buildConfigField "int", "MIN_SDK_VERSION", "$minSdkVersion.apiLevel"
 

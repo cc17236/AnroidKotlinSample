@@ -104,14 +104,9 @@ abstract class BaseFragment<in V : BaseContract.BaseView, P : BaseContract.BaseP
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val isValidate = AppVerify.isNativeValidate()
-        if (isValidate) {
             mPresenter = initPresenter()
             mPresenter!!.attachView(this as V)
             return inflater!!.inflate(getLayoutId(), container, false)
-        } else {
-            return View(container?.context)
-        }
 
     }
 
@@ -287,8 +282,6 @@ abstract class BaseFragment<in V : BaseContract.BaseView, P : BaseContract.BaseP
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val isValidate = AppVerify.isNativeValidate()
-        if (isValidate) {
             addCreateSubscribe(
                 Observable.create(ObservableOnSubscribe<Unit> {
                     configView()
@@ -305,7 +298,6 @@ abstract class BaseFragment<in V : BaseContract.BaseView, P : BaseContract.BaseP
                         (this as? BaseContract.BaseView)?.showError(it)
                     })
             )
-        }
 
     }
 

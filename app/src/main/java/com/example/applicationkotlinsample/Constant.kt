@@ -8,7 +8,7 @@ object Constant {
     }
     const val isUAT: Boolean = false
     //测试环境
-    val BASE_URL =""
+    val BASE_URL ="https://www.wanandroid.com/"
     //生产环境加密
     const val TEXT_ITYPE_VALUE = "text/aihua+;charset=UTF-8"
     //测试或UAT环境不加密

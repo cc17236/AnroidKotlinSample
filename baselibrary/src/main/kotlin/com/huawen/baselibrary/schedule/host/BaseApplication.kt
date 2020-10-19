@@ -86,7 +86,6 @@ abstract class BaseApplication : MultiDexApplication(), BaseApp {
     @SuppressLint("MissingSuperCall", "CheckResult")
     final override fun onCreate() {
         if (ProcessUtil.judgeMainProcess(this)) {
-            AppVerify.checkCheatSuspect(this)
             val delegateStatics = registerDelegateRef()
             doAsync {
                 Flowable.create(FlowableOnSubscribe<AppDelegate> {

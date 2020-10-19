@@ -54,15 +54,15 @@ internal class CustomGsonResponseBodyConverter<T>(
         } catch (e: Exception) {
             try {
                 var baseInfo = BaseInfo.BaseInfoImpl()
-                baseInfo.code = jsonObject.getString("code")
-                baseInfo.body = null
-                baseInfo.message = jsonObject.getString("message")
+                baseInfo.errorCode = jsonObject.getString("errorCode")
+                baseInfo.data = null
+                baseInfo.errorMsg = jsonObject.getString("errorMsg")
                 converter = baseInfo as T
             }catch (e:Exception){
                 var baseInfo = ListBaseInfo.ListBaseInfoImpl()
-                baseInfo.code = jsonObject.getString("code")
-                baseInfo.body = null
-                baseInfo.message = jsonObject.getString("message")
+                baseInfo.errorCode = jsonObject.getString("errorCode")
+                baseInfo.data = null
+                baseInfo.errorMsg = jsonObject.getString("message")
                 converter = baseInfo as T
             }
         }

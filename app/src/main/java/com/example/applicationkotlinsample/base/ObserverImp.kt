@@ -135,34 +135,32 @@ abstract class ObserverImp<T> : DisposableSubscriber<T> {
                 if (base is BaseInfo<*>) {
                     var baseinfo: BaseInfo<T>? = t as? BaseInfo<T>
 
-                    if (baseinfo != null && baseinfo.code.equals("00") && baseinfo.message.equals("success")) {
-                        if (baseinfo.body != null)
-                            doNext(baseinfo.body as T)
+                    if (baseinfo != null && baseinfo.errorCode.equals("0") ) {
+                        if (baseinfo.data != null)
+                            doNext(baseinfo.data as T)
                         else {
                             doNext(baseinfo as T)
                         }
-                    } else if (baseinfo != null && !baseinfo.code.equals("00") && !baseinfo.message.equals(
-                            "success"
-                        )
+                    } else if (baseinfo != null && !baseinfo.errorCode.equals("0")
                     ) {
-                        if (baseinfo?.code.equals("E000034") || baseinfo?.code.equals("E00001")|| baseinfo?.code.equals("E00010")) {//登录过期
+                        if (baseinfo?.errorCode.equals("-1001") ) {//登录过期
                             DisposalApp.app?.cleanLoginInfo()
                             DisposalApp.app?.openLogin()
                         }
-                        baseinfo.message?.let { doOnErr(ERR_CODE_LOGIC, it) }
+                        baseinfo.errorMsg?.let { doOnErr(ERR_CODE_LOGIC, it) }
                     } else {
                         doOnErr(ERR_CODE_LOGIC, "请求失败")
                     }
                     return
                 } else if (base is ListBaseInfo<*>) {
-                    if (base != null && base.code.equals("00") && base.message.equals("success")) {
+                    if (base != null && base.errorCode.equals("0")) {
                         doNext(base as T)
-                    } else if (base != null && !base.code.equals("00") && !base.message.equals("success")) {
-                        if (base?.code.equals("E000034") || base?.code.equals("E00001")|| base?.code.equals("E00010")) {//登录过期
+                    } else if (base != null && !base.errorCode.equals("0") ) {
+                        if (base?.errorCode.equals("-1001") ) {//登录过期
                             DisposalApp.app?.cleanLoginInfo()
                             DisposalApp.app?.openLogin()
                         }
-                        base.message?.let { doOnErr(ERR_CODE_LOGIC, it) }
+                        base.errorMsg?.let { doOnErr(ERR_CODE_LOGIC, it) }
                     } else {
                         doOnErr(ERR_CODE_LOGIC, "请求失败")
                     }
@@ -175,7 +173,7 @@ abstract class ObserverImp<T> : DisposableSubscriber<T> {
                     if (base.state()) {
                         doNext(base as T)
                     } else {
-                        doOnErr(ERR_CODE_LOGIC, base.msg ?: "逻辑错误,转换失败")
+                        doOnErr(ERR_CODE_LOGIC, base.errorMsg ?: "逻辑错误,转换失败")
                     }
                 } else {
                     doNext(base as T)
@@ -190,7 +188,7 @@ abstract class ObserverImp<T> : DisposableSubscriber<T> {
                 doNext(data2!!)
             } else {//网络接口内部逻辑出错
                 if (base is BaseStruct<*>) {
-                    doOnErr(ERR_CODE_LOGIC, base.msg ?: "逻辑错误,转换失败")
+                    doOnErr(ERR_CODE_LOGIC, base.errorMsg ?: "逻辑错误,转换失败")
                 } else {
                     doOnErr(ERR_CODE_LOGIC, "逻辑错误,转换失败")
                 }

@@ -31,23 +31,15 @@ abstract class BaseDialog : DialogFragment(), BaseContract.BaseView {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val isValidate = AppVerify.isNativeValidate()
-        if (isValidate) {
             return inflater.inflate(getLayoutId(), container, false)
-        } else {
-            return inflater.inflate(0, container, false)
-        }
     }
 
     private var mBundle: Bundle? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val isValidate = AppVerify.isNativeValidate()
-        if (isValidate) {
             initView()
             initData()
-        }
     }
 
     final fun setArguments(bundle: Bundle): BaseDialog {
